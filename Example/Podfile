@@ -1,10 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'NGORoundedButton', :exclusive => true do
-  pod "NGORoundedButton", :path => "../"
-end
 
-target 'Tests', :exclusive => true do
+target 'NGORoundedButton', :exclusive => true do
   pod "NGORoundedButton", :path => "../"
 
   
