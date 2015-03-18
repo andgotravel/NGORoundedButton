@@ -1,0 +1,14 @@
+PODS:
+  - NGORoundedButton (0.1.0)
+
+DEPENDENCIES:
+  - NGORoundedButton (from `../`)
+
+EXTERNAL SOURCES:
+  NGORoundedButton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NGORoundedButton: 449edf042e5c7d2067da09a5c2fffdbe22d453d9
+
+COCOAPODS: 0.36.0
