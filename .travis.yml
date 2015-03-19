@@ -1,4 +1,4 @@
 language: objective-c
-script: xctool -workspace Example/NGORoundedButton.xcworkspace -scheme NGORoundedButton -sdk iphonesimulator test
-
-
+xcode_workspace: Example/NGORoundedButton.xcworkspace 
+xcode_scheme: NGORoundedButtonTests 
+xcode_sdk: iphonesimulator8.1
