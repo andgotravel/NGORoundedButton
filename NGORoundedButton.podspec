@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "NGORoundedButton"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "A circle button for common actions. Icons are drawn in CoreGraphics."
   s.homepage         = "https://github.com/andgotravel/NGORoundedButton"
   s.license          = 'MIT'

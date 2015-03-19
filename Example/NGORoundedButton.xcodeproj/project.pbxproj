@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11BA4D68380D6352C8F11517 /* libPods-NGORoundedButton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B08F4E5349EB313268E07D65 /* libPods-NGORoundedButton.a */; };
-		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
-		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		7901D8DE1ABAC8D500E141AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7901D8DD1ABAC8D500E141AB /* Info.plist */; };
+		7901D8E01ABAC96500E141AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7901D8AA1AB9D59800E141AB /* Info.plist */; };
+		7901D8E11ABAC96E00E141AB /* NGORoundedButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901D8AB1AB9D59800E141AB /* NGORoundedButtonTests.m */; };
+		7901D8E21ABAC97100E141AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901D8631AB9D43700E141AB /* main.m */; };
+		7901D8E31ABAC98700E141AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7901D8621AB9D43700E141AB /* Images.xcassets */; };
+		7901D8E41ABAC9B600E141AB /* NGOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901D8651AB9D43700E141AB /* NGOAppDelegate.m */; };
+		7901D8E51ABAC9FC00E141AB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7901D85C1AB9D43700E141AB /* Main_iPad.storyboard */; };
+		7901D8E61ABAC9FE00E141AB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7901D85E1AB9D43700E141AB /* Main_iPhone.storyboard */; };
+		7901D8E71ABACA0300E141AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7901D8601AB9D43700E141AB /* InfoPlist.strings */; };
+		7901D8E81ABACA1100E141AB /* NGORoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901D8691AB9D43700E141AB /* NGORoundedButton.m */; };
+		7901D8E91ABACA1300E141AB /* NGOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901D86B1AB9D43700E141AB /* NGOViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7901D8D01AB9D5D700E141AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7901D8B61AB9D5D700E141AB;
+			remoteInfo = NGORoundedButton;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		32CC5146708F0F711EB46523 /* Pods-NGORoundedButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NGORoundedButton.release.xcconfig"; path = "Pods/Target Support Files/Pods-NGORoundedButton/Pods-NGORoundedButton.release.xcconfig"; sourceTree = "<group>"; };
@@ -22,12 +37,24 @@
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = NGORoundedButton.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		7901D85D1AB9D43700E141AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		7901D85F1AB9D43700E141AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		7901D8611AB9D43700E141AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7901D8621AB9D43700E141AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7901D8631AB9D43700E141AB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7901D8641AB9D43700E141AB /* NGOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGOAppDelegate.h; sourceTree = "<group>"; };
+		7901D8651AB9D43700E141AB /* NGOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGOAppDelegate.m; sourceTree = "<group>"; };
+		7901D8671AB9D43700E141AB /* NGORoundedButton-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NGORoundedButton-Prefix.pch"; sourceTree = "<group>"; };
+		7901D8681AB9D43700E141AB /* NGORoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGORoundedButton.h; sourceTree = "<group>"; };
+		7901D8691AB9D43700E141AB /* NGORoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGORoundedButton.m; sourceTree = "<group>"; };
+		7901D86A1AB9D43700E141AB /* NGOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGOViewController.h; sourceTree = "<group>"; };
+		7901D86B1AB9D43700E141AB /* NGOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGOViewController.m; sourceTree = "<group>"; };
+		7901D8AA1AB9D59800E141AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7901D8AB1AB9D59800E141AB /* NGORoundedButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGORoundedButtonTests.m; sourceTree = "<group>"; };
+		7901D8B71AB9D5D700E141AB /* NGORoundedButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGORoundedButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7901D8CF1AB9D5D700E141AB /* NGORoundedButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NGORoundedButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7901D8DD1ABAC8D500E141AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8000C488C957C80A5A24A20B /* Pods-NGORoundedButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NGORoundedButton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NGORoundedButton/Pods-NGORoundedButton.debug.xcconfig"; sourceTree = "<group>"; };
 		B08F4E5349EB313268E07D65 /* libPods-NGORoundedButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NGORoundedButton.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B212A2703847B926B6F1C18E /* NGORoundedButton.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NGORoundedButton.podspec; path = ../NGORoundedButton.podspec; sourceTree = "<group>"; };
@@ -35,14 +62,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6003F5AB195388D20070C39A /* Frameworks */ = {
+		7901D8B41AB9D5D700E141AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
-				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
-				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				11BA4D68380D6352C8F11517 /* libPods-NGORoundedButton.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7901D8CC1AB9D5D700E141AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F5B5195388D20070C39A /* Tests */,
+				7901D85B1AB9D43700E141AB /* NGORoundedButton */,
+				7901D8A91AB9D59800E141AB /* Supporting Files */,
+				7901D8A81AB9D59800E141AB /* NGORoundedButtonTests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				2AF289CE51A7485D2BA5BF0E /* Pods */,
@@ -73,7 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				6003F58A195388D20070C39A /* NGORoundedButton.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				7901D8B71AB9D5D700E141AB /* NGORoundedButton.app */,
+				7901D8CF1AB9D5D700E141AB /* NGORoundedButtonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,25 +123,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6003F5B5195388D20070C39A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
-				6003F5B6195388D20070C39A /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		6003F5B6195388D20070C39A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5B7195388D20070C39A /* Tests-Info.plist */,
-				6003F5B8195388D20070C39A /* InfoPlist.strings */,
-				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,26 +133,88 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		7901D85B1AB9D43700E141AB /* NGORoundedButton */ = {
+			isa = PBXGroup;
+			children = (
+				7901D85C1AB9D43700E141AB /* Main_iPad.storyboard */,
+				7901D85E1AB9D43700E141AB /* Main_iPhone.storyboard */,
+				7901D8601AB9D43700E141AB /* InfoPlist.strings */,
+				7901D8621AB9D43700E141AB /* Images.xcassets */,
+				7901D8631AB9D43700E141AB /* main.m */,
+				7901D8DD1ABAC8D500E141AB /* Info.plist */,
+				7901D8641AB9D43700E141AB /* NGOAppDelegate.h */,
+				7901D8651AB9D43700E141AB /* NGOAppDelegate.m */,
+				7901D8671AB9D43700E141AB /* NGORoundedButton-Prefix.pch */,
+				7901D8EA1ABACA7200E141AB /* NGORoundedBUtton */,
+				7901D86A1AB9D43700E141AB /* NGOViewController.h */,
+				7901D86B1AB9D43700E141AB /* NGOViewController.m */,
+			);
+			path = NGORoundedButton;
+			sourceTree = "<group>";
+		};
+		7901D8A81AB9D59800E141AB /* NGORoundedButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				7901D8AB1AB9D59800E141AB /* NGORoundedButtonTests.m */,
+			);
+			path = NGORoundedButtonTests;
+			sourceTree = "<group>";
+		};
+		7901D8A91AB9D59800E141AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7901D8AA1AB9D59800E141AB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = NGORoundedButtonTests;
+			sourceTree = "<group>";
+		};
+		7901D8EA1ABACA7200E141AB /* NGORoundedBUtton */ = {
+			isa = PBXGroup;
+			children = (
+				7901D8681AB9D43700E141AB /* NGORoundedButton.h */,
+				7901D8691AB9D43700E141AB /* NGORoundedButton.m */,
+			);
+			name = NGORoundedBUtton;
+			path = NGORoundedButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F5AD195388D20070C39A /* NGORoundedButton */ = {
+		7901D8B61AB9D5D700E141AB /* NGORoundedButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "NGORoundedButton" */;
+			buildConfigurationList = 7901D8D71AB9D5D700E141AB /* Build configuration list for PBXNativeTarget "NGORoundedButton" */;
 			buildPhases = (
-				261A30E7FB647F7939489668 /* Check Pods Manifest.lock */,
-				6003F5AA195388D20070C39A /* Sources */,
-				6003F5AB195388D20070C39A /* Frameworks */,
-				6003F5AC195388D20070C39A /* Resources */,
-				31ED6C1E1F9877AE81F7AE93 /* Copy Pods Resources */,
+				7901D8B31AB9D5D700E141AB /* Sources */,
+				7901D8B41AB9D5D700E141AB /* Frameworks */,
+				7901D8B51AB9D5D700E141AB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = NGORoundedButton;
+			productName = NGORoundedButton;
+			productReference = 7901D8B71AB9D5D700E141AB /* NGORoundedButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7901D8CE1AB9D5D700E141AB /* NGORoundedButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7901D8DA1AB9D5D700E141AB /* Build configuration list for PBXNativeTarget "NGORoundedButtonTests" */;
+			buildPhases = (
+				7901D8CB1AB9D5D700E141AB /* Sources */,
+				7901D8CC1AB9D5D700E141AB /* Frameworks */,
+				7901D8CD1AB9D5D700E141AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7901D8D11AB9D5D700E141AB /* PBXTargetDependency */,
+			);
+			name = NGORoundedButtonTests;
 			productName = NGORoundedButtonTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 7901D8CF1AB9D5D700E141AB /* NGORoundedButtonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -151,8 +227,12 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Stas Zhukovskiy";
 				TargetAttributes = {
-					6003F5AD195388D20070C39A = {
-						TestTargetID = 6003F589195388D20070C39A;
+					7901D8B61AB9D5D700E141AB = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					7901D8CE1AB9D5D700E141AB = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 7901D8B61AB9D5D700E141AB;
 					};
 				};
 			};
@@ -169,71 +249,86 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F5AD195388D20070C39A /* NGORoundedButton */,
+				7901D8B61AB9D5D700E141AB /* NGORoundedButton */,
+				7901D8CE1AB9D5D700E141AB /* NGORoundedButtonTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6003F5AC195388D20070C39A /* Resources */ = {
+		7901D8B51AB9D5D700E141AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+				7901D8E61ABAC9FE00E141AB /* Main_iPhone.storyboard in Resources */,
+				7901D8E51ABAC9FC00E141AB /* Main_iPad.storyboard in Resources */,
+				7901D8DE1ABAC8D500E141AB /* Info.plist in Resources */,
+				7901D8E31ABAC98700E141AB /* Images.xcassets in Resources */,
+				7901D8E71ABACA0300E141AB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7901D8CD1AB9D5D700E141AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7901D8E01ABAC96500E141AB /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		261A30E7FB647F7939489668 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		31ED6C1E1F9877AE81F7AE93 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGORoundedButton/Pods-NGORoundedButton-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		6003F5AA195388D20070C39A /* Sources */ = {
+		7901D8B31AB9D5D700E141AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				7901D8E81ABACA1100E141AB /* NGORoundedButton.m in Sources */,
+				7901D8E91ABACA1300E141AB /* NGOViewController.m in Sources */,
+				7901D8E21ABAC97100E141AB /* main.m in Sources */,
+				7901D8E41ABAC9B600E141AB /* NGOAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7901D8CB1AB9D5D700E141AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7901D8E11ABAC96E00E141AB /* NGORoundedButtonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7901D8D11AB9D5D700E141AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7901D8B61AB9D5D700E141AB /* NGORoundedButton */;
+			targetProxy = 7901D8D01AB9D5D700E141AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+		7901D85C1AB9D43700E141AB /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6003F5B9195388D20070C39A /* en */,
+				7901D85D1AB9D43700E141AB /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		7901D85E1AB9D43700E141AB /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7901D85F1AB9D43700E141AB /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		7901D8601AB9D43700E141AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7901D8611AB9D43700E141AB /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -313,43 +408,79 @@
 			};
 			name = Release;
 		};
-		6003F5C3195388D20070C39A /* Debug */ = {
+		7901D8D81AB9D5D700E141AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8000C488C957C80A5A24A20B /* Pods-NGORoundedButton.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				INFOPLIST_FILE = NGORoundedButton/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		6003F5C4195388D20070C39A /* Release */ = {
+		7901D8D91AB9D5D700E141AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32CC5146708F0F711EB46523 /* Pods-NGORoundedButton.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = NGORoundedButton/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		7901D8DB1AB9D5D700E141AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NGORoundedButtonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NGORoundedButton.app/NGORoundedButton";
+			};
+			name = Debug;
+		};
+		7901D8DC1AB9D5D700E141AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NGORoundedButtonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NGORoundedButton.app/NGORoundedButton";
 			};
 			name = Release;
 		};
@@ -365,11 +496,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "NGORoundedButton" */ = {
+		7901D8D71AB9D5D700E141AB /* Build configuration list for PBXNativeTarget "NGORoundedButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6003F5C3195388D20070C39A /* Debug */,
-				6003F5C4195388D20070C39A /* Release */,
+				7901D8D81AB9D5D700E141AB /* Debug */,
+				7901D8D91AB9D5D700E141AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7901D8DA1AB9D5D700E141AB /* Build configuration list for PBXNativeTarget "NGORoundedButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7901D8DB1AB9D5D700E141AB /* Debug */,
+				7901D8DC1AB9D5D700E141AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
