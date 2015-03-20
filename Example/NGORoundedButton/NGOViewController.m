@@ -28,9 +28,7 @@
     [super viewDidLayoutSubviews];
     
     [self setupBackGradient];
-    [self setupSaveButton];
-    [self setupCancelButton];
-    [self setupBackButton];
+    [self setupButtons];
     [self setupScrollView];
 }
 
@@ -42,22 +40,22 @@
     [self.view sendSubviewToBack:gradient];
 }
 
-- (void)setupSaveButton {
+- (void)setupButtons {
     
     NGORoundedButton *saveButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeSave];
     [self.buttons addObject:saveButton];
-}
 
-- (void)setupCancelButton {
-    
     NGORoundedButton *cancelButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeCancel];
     [self.buttons addObject:cancelButton];
-}
 
-- (void)setupBackButton {
-    
     NGORoundedButton *backButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeBack];
     [self.buttons addObject:backButton];
+
+    NGORoundedButton *filterButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeFilter];
+    [self.buttons addObject:filterButton];
+    
+    NGORoundedButton *shareButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeShare];
+    [self.buttons addObject:shareButton];
 }
 
 - (void)setupScrollView {
@@ -99,10 +97,11 @@
     NSString *result = @"";
     
     switch (type) {
-        case NGORoundedButtonTypeSave:      result = @"ButtonTypeSave";   break;
-        case NGORoundedButtonTypeCancel:    result = @"ButtonTypeCancel"; break;
-        case NGORoundedButtonTypeBack:      result = @"ButtonTypeBack";   break;
-        default: break;
+        case NGORoundedButtonTypeSave:      result = @"ButtonTypeSave";     break;
+        case NGORoundedButtonTypeCancel:    result = @"ButtonTypeCancel";   break;
+        case NGORoundedButtonTypeBack:      result = @"ButtonTypeBack";     break;
+        case NGORoundedButtonTypeFilter:    result = @"ButtonTypeFilter";   break;
+        case NGORoundedButtonTypeShare:     result = @"ButtonTypeShare";    break;
     }
     return result;
 }
