@@ -64,7 +64,8 @@
         case NGORoundedButtonTypeSave:      [self setupSaveButton];     break;
         case NGORoundedButtonTypeCancel:    [self setupCancelButton];   break;
         case NGORoundedButtonTypeBack:      [self setupBackButton];     break;
-        default: break;
+        case NGORoundedButtonTypeFilter:    [self setupFilterButton];   break;
+        case NGORoundedButtonTypeShare:     [self setupShareButton];    break;
     }
     
     [self setupTargets];
@@ -170,6 +171,88 @@
     CGPathRelease(path);
     
     [self.layer addSublayer:leftArrowShape];
+}
+
+- (void)setupFilterButton {
+    
+    UIColor *backgroundColor    = [UIColor whiteColor];
+    UIColor *borderColor        = [UIColor colorWithRed:227/255.0 green:231/255.0 blue:236/255.0 alpha:0.9];
+    UIColor *strokeColor        = [UIColor colorWithRed:73/255.0 green:78/255.0 blue:91/255.0 alpha:1.0];
+    
+    self.backgroundColor                = backgroundColor;
+    self.layer.cornerRadius             = CGRectGetWidth(self.bounds) / 2;
+    self.layer.borderWidth              = 1 / [UIScreen mainScreen].scale;
+    self.layer.borderColor              = borderColor.CGColor;
+    self.layer.allowsEdgeAntialiasing   = YES;
+    
+    CAShapeLayer *funnelShape    = [CAShapeLayer layer];
+    funnelShape.lineWidth        = 3 / [UIScreen mainScreen].scale;
+    funnelShape.masksToBounds    = NO;
+    funnelShape.lineCap          = kCALineCapRound;
+    funnelShape.strokeColor      = strokeColor.CGColor;
+    funnelShape.fillColor        = backgroundColor.CGColor;
+    
+    CGRect fr               = self.bounds;
+    CGFloat width           = CGRectGetWidth(fr);
+    CGFloat height          = CGRectGetHeight(fr);
+    CGMutablePathRef path   = CGPathCreateMutable();
+    
+    CGPathMoveToPoint(path, NULL, CGRectGetMidX(fr) - (width / 4.5), CGRectGetMidY(fr) - (height / 6.76));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) + (width / 4.5), CGRectGetMidY(fr) - (height / 6.76));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) + (width / 24), CGRectGetMidY(fr) + (height / 11));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) + (width / 24), CGRectGetMidY(fr) + (height / 4.88));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) - (width / 24), CGRectGetMidY(fr) + (height / 4.19));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) - (width / 24), CGRectGetMidY(fr) + (height / 11));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) - (width / 4.5), CGRectGetMidY(fr) - (height / 6.76));
+    
+    funnelShape.path = path;
+    CGPathRelease(path);
+    
+    [self.layer addSublayer:funnelShape];
+}
+
+- (void)setupShareButton {
+    
+    UIColor *backgroundColor    = [UIColor whiteColor];
+    UIColor *borderColor        = [UIColor colorWithRed:227/255.0 green:231/255.0 blue:236/255.0 alpha:0.9];
+    UIColor *strokeColor        = [UIColor colorWithRed:73/255.0 green:78/255.0 blue:91/255.0 alpha:1.0];
+    
+    self.backgroundColor                = backgroundColor;
+    self.layer.cornerRadius             = CGRectGetWidth(self.bounds) / 2;
+    self.layer.borderWidth              = 1 / [UIScreen mainScreen].scale;
+    self.layer.borderColor              = borderColor.CGColor;
+    self.layer.allowsEdgeAntialiasing   = YES;
+    
+    CAShapeLayer *squareAndArrowShape   = [CAShapeLayer layer];
+    squareAndArrowShape.lineWidth       = 3 / [UIScreen mainScreen].scale;
+    squareAndArrowShape.masksToBounds   = NO;
+    squareAndArrowShape.lineCap         = kCALineCapRound;
+    squareAndArrowShape.strokeColor     = strokeColor.CGColor;
+    squareAndArrowShape.fillColor       = backgroundColor.CGColor;
+    
+    CGRect fr               = self.bounds;
+    CGFloat width           = CGRectGetWidth(fr);
+    CGFloat height          = CGRectGetHeight(fr);
+    CGMutablePathRef path   = CGPathCreateMutable();
+    //square
+    CGPathMoveToPoint(path, NULL, CGRectGetMidX(fr) - (width / 6.76), CGRectGetMidY(fr) - (height / 9.77));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) - (width / 14.6), CGRectGetMidY(fr) - (height / 9.77));
+    CGPathMoveToPoint(path, NULL, CGRectGetMidX(fr) + (width / 14.6), CGRectGetMidY(fr) - (height / 9.77));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) + (width / 6.76), CGRectGetMidY(fr) - (height / 9.77));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) + (width / 6.76), CGRectGetMidY(fr) + (height / 4.88));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) - (width / 6.76), CGRectGetMidY(fr) + (height / 4.88));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) - (width / 6.76), CGRectGetMidY(fr) - (height / 9.77));
+    //arrow
+    CGPathMoveToPoint(path, NULL, CGRectGetMidX(fr), CGRectGetMidY(fr) + (height / 22));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr), CGRectGetMidY(fr) - (height / 4.4));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) - (width / 14.6), CGRectGetMidY(fr) - (height / 5.5));
+    CGPathMoveToPoint(path, NULL, CGRectGetMidX(fr), CGRectGetMidY(fr) - (height / 4.4));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) + (width / 14.6), CGRectGetMidY(fr) - (height / 5.5));
+    
+    squareAndArrowShape.path = path;
+    CGPathRelease(path);
+    
+    [self.layer addSublayer:squareAndArrowShape];
 }
 
 #pragma mark - Common UI setup

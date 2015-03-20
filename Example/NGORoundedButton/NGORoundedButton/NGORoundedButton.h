@@ -11,7 +11,9 @@
 typedef NS_ENUM(NSInteger, NGORoundedButtonType) {
     NGORoundedButtonTypeSave,
     NGORoundedButtonTypeCancel,
-    NGORoundedButtonTypeBack
+    NGORoundedButtonTypeBack,
+    NGORoundedButtonTypeFilter,
+    NGORoundedButtonTypeShare
 };
 
 @interface NGORoundedButton : UIButton
