@@ -5,8 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/NGORoundedButton.svg?style=flat)](http://cocoadocs.org/docsets/NGORoundedButton)
 [![Platform](https://img.shields.io/cocoapods/p/NGORoundedButton.svg?style=flat)](http://cocoadocs.org/docsets/NGORoundedButton)
 
-![Banner](https://github.com/andgotravel/NGORoundedButton/blob/new_design/Pod/Assets/Screen_Shot_1.png?raw=true)
-![Banner](https://github.com/andgotravel/NGORoundedButton/blob/new_design/Pod/Assets/Screen_Shot_2.png?raw=true)
+![Banner](https://github.com/andgotravel/NGORoundedButton/blob/master/Pod/Assets/Screen_Shot_1.png)
+![Banner](https://github.com/andgotravel/NGORoundedButton/blob/master/Pod/Assets/Screen_Shot_2.png)
 
 ## Usage
 
