@@ -27,9 +27,12 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    [self setupBackGradient];
-    [self setupButtons];
-    [self setupScrollView];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self setupBackGradient];
+        [self setupButtons];
+        [self setupScrollView];
+    });
 }
 
 - (void)setupBackGradient {
@@ -44,18 +47,39 @@
     
     NGORoundedButton *saveButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeSave];
     [self.buttons addObject:saveButton];
-
+    
+    NGORoundedButton *saveButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeSave andShape:NGORoundedButtonShapeSausage];
+    [self.buttons addObject:saveButtonLong];
+    
+    NGORoundedButton *OKButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeOK];
+    [self.buttons addObject:OKButton];
+    
+    NGORoundedButton *OKButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeOK andShape:NGORoundedButtonShapeSausage];
+    [self.buttons addObject:OKButtonLong];
+    
     NGORoundedButton *cancelButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeCancel];
     [self.buttons addObject:cancelButton];
+    
+    NGORoundedButton *cancelButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeCancel andShape:NGORoundedButtonShapeSausage];
+    [self.buttons addObject:cancelButtonLong];
 
     NGORoundedButton *backButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeBack];
     [self.buttons addObject:backButton];
+    
+    NGORoundedButton *backButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeBack andShape:NGORoundedButtonShapeSausage];
+    [self.buttons addObject:backButtonLong];
 
     NGORoundedButton *filterButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeFilter];
     [self.buttons addObject:filterButton];
     
+    NGORoundedButton *filterButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeFilter andShape:NGORoundedButtonShapeSausage];
+    [self.buttons addObject:filterButtonLong];
+    
     NGORoundedButton *shareButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeShare];
     [self.buttons addObject:shareButton];
+    
+    NGORoundedButton *shareButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeShare andShape:NGORoundedButtonShapeSausage];
+    [self.buttons addObject:shareButtonLong];
 }
 
 - (void)setupScrollView {
@@ -98,6 +122,7 @@
     
     switch (type) {
         case NGORoundedButtonTypeSave:      result = @"ButtonTypeSave";     break;
+        case NGORoundedButtonTypeOK:        result = @"ButtonTypeOK";       break;
         case NGORoundedButtonTypeCancel:    result = @"ButtonTypeCancel";   break;
         case NGORoundedButtonTypeBack:      result = @"ButtonTypeBack";     break;
         case NGORoundedButtonTypeFilter:    result = @"ButtonTypeFilter";   break;

@@ -145,7 +145,7 @@
 				7901D8641AB9D43700E141AB /* NGOAppDelegate.h */,
 				7901D8651AB9D43700E141AB /* NGOAppDelegate.m */,
 				7901D8671AB9D43700E141AB /* NGORoundedButton-Prefix.pch */,
-				7901D8EA1ABACA7200E141AB /* NGORoundedBUtton */,
+				7901D8EA1ABACA7200E141AB /* NGORoundedButton */,
 				7901D86A1AB9D43700E141AB /* NGOViewController.h */,
 				7901D86B1AB9D43700E141AB /* NGOViewController.m */,
 			);
@@ -169,13 +169,12 @@
 			path = NGORoundedButtonTests;
 			sourceTree = "<group>";
 		};
-		7901D8EA1ABACA7200E141AB /* NGORoundedBUtton */ = {
+		7901D8EA1ABACA7200E141AB /* NGORoundedButton */ = {
 			isa = PBXGroup;
 			children = (
 				7901D8681AB9D43700E141AB /* NGORoundedButton.h */,
 				7901D8691AB9D43700E141AB /* NGORoundedButton.m */,
 			);
-			name = NGORoundedBUtton;
 			path = NGORoundedButton;
 			sourceTree = "<group>";
 		};
