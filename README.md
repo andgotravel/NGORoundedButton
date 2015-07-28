@@ -1,6 +1,5 @@
 # NGORoundedButton
 
-[![CI Status](http://img.shields.io/travis/andgotravel/NGORoundedButton.svg?style=flat)](https://travis-ci.org/andgotravel/NGORoundedButton)
 [![Version](https://img.shields.io/cocoapods/v/NGORoundedButton.svg?style=flat)](http://cocoadocs.org/docsets/NGORoundedButton)
 [![License](https://img.shields.io/cocoapods/l/NGORoundedButton.svg?style=flat)](http://cocoadocs.org/docsets/NGORoundedButton)
 [![Platform](https://img.shields.io/cocoapods/p/NGORoundedButton.svg?style=flat)](http://cocoadocs.org/docsets/NGORoundedButton)
