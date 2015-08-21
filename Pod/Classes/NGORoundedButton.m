@@ -8,6 +8,8 @@
 
 #import "NGORoundedButton.h"
 
+#define SHAPE_TAG @"CustomShapeTag"
+
 @implementation NGORoundedButton
 
 #pragma mark - Init
@@ -64,12 +66,22 @@
     [self setup];
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self setup];
+}
+
 - (void)setup {
 
-    [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
+    for (CALayer *layer in self.layer.sublayers) {
+        if ([layer.name isEqualToString:SHAPE_TAG]) {
+            [layer removeFromSuperlayer];
+        }
+    }
 
     [self setupCornerRadius];
     [self setupShadow];
+    [self setupTargets];
 
     switch (self.type) {
         case NGORoundedButtonTypeSave:      [self setupSaveButton];     break;
@@ -79,8 +91,6 @@
         case NGORoundedButtonTypeFilter:    [self setupFilterButton];   break;
         case NGORoundedButtonTypeShare:     [self setupShareButton];    break;
     }
-    
-    [self setupTargets];
 }
 
 - (void)setType:(NGORoundedButtonType)newType {
@@ -106,6 +116,7 @@
     self.backgroundColor = [UIColor colorWithRed:105/255.0 green:204/255.0 blue:57/255.0 alpha:1];;
     
     CAShapeLayer *checkmarkShape    = [CAShapeLayer layer];
+    checkmarkShape.name             = SHAPE_TAG;
     checkmarkShape.lineWidth        = 2;
     checkmarkShape.masksToBounds    = NO;
     checkmarkShape.lineCap          = kCALineCapRound;
@@ -138,6 +149,7 @@
     self.layer.allowsEdgeAntialiasing   = YES;
     
     CAShapeLayer *crossShape    = [CAShapeLayer layer];
+    crossShape.name             = SHAPE_TAG;
     crossShape.lineWidth        = 2;
     crossShape.masksToBounds    = NO;
     crossShape.lineCap          = kCALineCapRound;
@@ -164,13 +176,14 @@
     self.layer.allowsEdgeAntialiasing   = YES;
     
     CAShapeLayer *leftArrowShape    = [CAShapeLayer layer];
+    leftArrowShape.name             = SHAPE_TAG;
     leftArrowShape.lineWidth        = 2;
     leftArrowShape.masksToBounds    = NO;
     leftArrowShape.lineCap          = kCALineCapRound;
     leftArrowShape.strokeColor      = [UIColor whiteColor].CGColor;
     leftArrowShape.fillColor        = self.backgroundColor.CGColor;
     
-    CGRect fr       = self.bounds;
+    CGRect fr = self.bounds;
     
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, NULL, CGRectGetMidX(fr) + 3, CGRectGetMidY(fr) - 7);
@@ -189,6 +202,7 @@
     self.layer.allowsEdgeAntialiasing   = YES;
     
     CAShapeLayer *funnelShape   = [CAShapeLayer layer];
+    funnelShape.name            = SHAPE_TAG;
     funnelShape.lineWidth       = 2;
     funnelShape.masksToBounds   = NO;
     funnelShape.lineCap         = kCALineCapRound;
@@ -219,6 +233,7 @@
     self.layer.allowsEdgeAntialiasing   = YES;
     
     CAShapeLayer *squareAndArrowShape   = [CAShapeLayer layer];
+    squareAndArrowShape.name            = SHAPE_TAG;
     squareAndArrowShape.lineWidth       = 2;
     squareAndArrowShape.masksToBounds   = NO;
     squareAndArrowShape.lineCap         = kCALineCapRound;
@@ -287,4 +302,3 @@
 }
 
 @end
-
