@@ -1,5 +1,6 @@
 # NGORoundedButton
 
+[![Build Status](https://www.bitrise.io/app/865b8202a70ccb07.svg?token=pSNcntf_xtpD1glCA31v1g&branch=master)](https://www.bitrise.io/app/865b8202a70ccb07)
 [![Version](https://img.shields.io/cocoapods/v/NGORoundedButton.svg?style=flat)](http://cocoadocs.org/docsets/NGORoundedButton)
 [![License](https://img.shields.io/cocoapods/l/NGORoundedButton.svg?style=flat)](http://cocoadocs.org/docsets/NGORoundedButton)
 [![Platform](https://img.shields.io/cocoapods/p/NGORoundedButton.svg?style=flat)](http://cocoadocs.org/docsets/NGORoundedButton)
