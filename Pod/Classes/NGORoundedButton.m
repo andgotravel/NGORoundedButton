@@ -113,6 +113,8 @@
 
 - (void)setupSaveButton {
     
+    self.accessibilityLabel     = @"Save";
+    self.accessibilityTraits    = UIAccessibilityTraitButton;
     self.backgroundColor = [UIColor colorWithRed:105/255.0 green:204/255.0 blue:57/255.0 alpha:1];;
     
     CAShapeLayer *checkmarkShape    = [CAShapeLayer layer];
@@ -136,6 +138,8 @@
 
 - (void)setupOKButton {
     
+    self.accessibilityLabel     = @"Ok";
+    self.accessibilityTraits    = UIAccessibilityTraitButton;
     self.backgroundColor        = [UIColor colorWithRed:105/255.0 green:204/255.0 blue:57/255.0 alpha:1];
     NSDictionary *dict          = @{ NSForegroundColorAttributeName: [UIColor whiteColor],
                                      NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:18] };
@@ -145,6 +149,8 @@
 
 - (void)setupCancelButton {
     
+    self.accessibilityLabel     = @"Cancel";
+    self.accessibilityTraits    = UIAccessibilityTraitButton;
     self.backgroundColor                = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1.0];
     self.layer.allowsEdgeAntialiasing   = YES;
     
@@ -172,6 +178,8 @@
 
 - (void)setupBackButton {
     
+    self.accessibilityLabel     = @"Back";
+    self.accessibilityTraits    = UIAccessibilityTraitButton;
     self.backgroundColor                = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1.0];
     self.layer.allowsEdgeAntialiasing   = YES;
     
@@ -198,6 +206,8 @@
 
 - (void)setupFilterButton {
     
+    self.accessibilityLabel     = @"Filter";
+    self.accessibilityTraits    = UIAccessibilityTraitButton;
     self.backgroundColor                = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1.0];
     self.layer.allowsEdgeAntialiasing   = YES;
     
@@ -229,6 +239,8 @@
 
 - (void)setupShareButton {
     
+    self.accessibilityLabel     = @"Share";
+    self.accessibilityTraits    = UIAccessibilityTraitButton;
     self.backgroundColor                = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1.0];
     self.layer.allowsEdgeAntialiasing   = YES;
     

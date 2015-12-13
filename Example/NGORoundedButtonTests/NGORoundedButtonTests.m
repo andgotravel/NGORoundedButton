@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "NGORoundedButton.h"
 
 @interface NGORoundedButtonTests : XCTestCase
 
@@ -17,23 +18,53 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testThatButtonCanInitWithDefaultSize {
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithDefaultSize];
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+- (void)testThatButtonCanInitWithType {
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeFilter];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeFilter);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height);
+}
+
+- (void)testThatButtonCanInitWithTypeAndShape {
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeSave andShape:NGORoundedButtonShapeSausage];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeSave);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeSausage);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height * 2);
+}
+
+- (void)testThatButtonHasAccessabilityLabel {
+    
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithDefaultSize];
+
+    NSArray *types = @[@(NGORoundedButtonTypeBack),
+                       @(NGORoundedButtonTypeCancel),
+                       @(NGORoundedButtonTypeFilter),
+                       @(NGORoundedButtonTypeOK),
+                       @(NGORoundedButtonTypeSave),
+                       @(NGORoundedButtonTypeShare)];
+    
+    [types enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NGORoundedButtonType type = [types[idx] integerValue];
+        button.type = type;
+        XCTAssertNotNil(button.accessibilityLabel);
+        XCTAssertGreaterThan(button.accessibilityLabel.length, 0);
+        XCTAssertGreaterThan(button.accessibilityTraits, UIAccessibilityTraitNone);
     }];
 }
 

@@ -16,8 +16,9 @@
 		7901D8E51ABAC9FC00E141AB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7901D85C1AB9D43700E141AB /* Main_iPad.storyboard */; };
 		7901D8E61ABAC9FE00E141AB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7901D85E1AB9D43700E141AB /* Main_iPhone.storyboard */; };
 		7901D8E71ABACA0300E141AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7901D8601AB9D43700E141AB /* InfoPlist.strings */; };
-		7901D8E81ABACA1100E141AB /* NGORoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901D8691AB9D43700E141AB /* NGORoundedButton.m */; };
 		7901D8E91ABACA1300E141AB /* NGOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901D86B1AB9D43700E141AB /* NGOViewController.m */; };
+		799823D51C1D68EF00A8DDEB /* NGORoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 799823D41C1D68EF00A8DDEB /* NGORoundedButton.m */; };
+		799823D61C1D6C1400A8DDEB /* NGORoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 799823D41C1D68EF00A8DDEB /* NGORoundedButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,6 @@
 		7901D8641AB9D43700E141AB /* NGOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGOAppDelegate.h; sourceTree = "<group>"; };
 		7901D8651AB9D43700E141AB /* NGOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGOAppDelegate.m; sourceTree = "<group>"; };
 		7901D8671AB9D43700E141AB /* NGORoundedButton-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NGORoundedButton-Prefix.pch"; sourceTree = "<group>"; };
-		7901D8681AB9D43700E141AB /* NGORoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGORoundedButton.h; sourceTree = "<group>"; };
-		7901D8691AB9D43700E141AB /* NGORoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGORoundedButton.m; sourceTree = "<group>"; };
 		7901D86A1AB9D43700E141AB /* NGOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGOViewController.h; sourceTree = "<group>"; };
 		7901D86B1AB9D43700E141AB /* NGOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGOViewController.m; sourceTree = "<group>"; };
 		7901D8AA1AB9D59800E141AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +54,8 @@
 		7901D8B71AB9D5D700E141AB /* NGORoundedButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGORoundedButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7901D8CF1AB9D5D700E141AB /* NGORoundedButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NGORoundedButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7901D8DD1ABAC8D500E141AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		799823D31C1D68EF00A8DDEB /* NGORoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGORoundedButton.h; path = ../../../Pod/Classes/NGORoundedButton.h; sourceTree = "<group>"; };
+		799823D41C1D68EF00A8DDEB /* NGORoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGORoundedButton.m; path = ../../../Pod/Classes/NGORoundedButton.m; sourceTree = "<group>"; };
 		8000C488C957C80A5A24A20B /* Pods-NGORoundedButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NGORoundedButton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NGORoundedButton/Pods-NGORoundedButton.debug.xcconfig"; sourceTree = "<group>"; };
 		B08F4E5349EB313268E07D65 /* libPods-NGORoundedButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NGORoundedButton.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B212A2703847B926B6F1C18E /* NGORoundedButton.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NGORoundedButton.podspec; path = ../NGORoundedButton.podspec; sourceTree = "<group>"; };
@@ -172,8 +173,8 @@
 		7901D8EA1ABACA7200E141AB /* NGORoundedButton */ = {
 			isa = PBXGroup;
 			children = (
-				7901D8681AB9D43700E141AB /* NGORoundedButton.h */,
-				7901D8691AB9D43700E141AB /* NGORoundedButton.m */,
+				799823D31C1D68EF00A8DDEB /* NGORoundedButton.h */,
+				799823D41C1D68EF00A8DDEB /* NGORoundedButton.m */,
 			);
 			path = NGORoundedButton;
 			sourceTree = "<group>";
@@ -282,9 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7901D8E81ABACA1100E141AB /* NGORoundedButton.m in Sources */,
 				7901D8E91ABACA1300E141AB /* NGOViewController.m in Sources */,
 				7901D8E21ABAC97100E141AB /* main.m in Sources */,
+				799823D51C1D68EF00A8DDEB /* NGORoundedButton.m in Sources */,
 				7901D8E41ABAC9B600E141AB /* NGOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799823D61C1D6C1400A8DDEB /* NGORoundedButton.m in Sources */,
 				7901D8E11ABAC96E00E141AB /* NGORoundedButtonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
