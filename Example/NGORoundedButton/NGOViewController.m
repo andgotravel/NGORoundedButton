@@ -7,7 +7,7 @@
 //
 
 #import "NGOViewController.h"
-#import "NGORoundedButton.h"
+#import <NGORoundedButton/NGORoundedButton.h>
 
 @interface NGOViewController ()
 

@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7901D8DE1ABAC8D500E141AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7901D8DD1ABAC8D500E141AB /* Info.plist */; };
-		7901D8E01ABAC96500E141AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7901D8AA1AB9D59800E141AB /* Info.plist */; };
+		3AF64F21D4376964C64EE267 /* libPods-NGORoundedButton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B08F4E5349EB313268E07D65 /* libPods-NGORoundedButton.a */; };
 		7901D8E11ABAC96E00E141AB /* NGORoundedButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901D8AB1AB9D59800E141AB /* NGORoundedButtonTests.m */; };
 		7901D8E21ABAC97100E141AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901D8631AB9D43700E141AB /* main.m */; };
 		7901D8E31ABAC98700E141AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7901D8621AB9D43700E141AB /* Images.xcassets */; };
@@ -17,8 +16,7 @@
 		7901D8E61ABAC9FE00E141AB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7901D85E1AB9D43700E141AB /* Main_iPhone.storyboard */; };
 		7901D8E71ABACA0300E141AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7901D8601AB9D43700E141AB /* InfoPlist.strings */; };
 		7901D8E91ABACA1300E141AB /* NGOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901D86B1AB9D43700E141AB /* NGOViewController.m */; };
-		799823D51C1D68EF00A8DDEB /* NGORoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 799823D41C1D68EF00A8DDEB /* NGORoundedButton.m */; };
-		799823D61C1D6C1400A8DDEB /* NGORoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 799823D41C1D68EF00A8DDEB /* NGORoundedButton.m */; };
+		EDDD94DE3869CF7A18EF2B33 /* libPods-NGORoundedButton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B08F4E5349EB313268E07D65 /* libPods-NGORoundedButton.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +52,6 @@
 		7901D8B71AB9D5D700E141AB /* NGORoundedButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGORoundedButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7901D8CF1AB9D5D700E141AB /* NGORoundedButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NGORoundedButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7901D8DD1ABAC8D500E141AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		799823D31C1D68EF00A8DDEB /* NGORoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGORoundedButton.h; path = ../../../Pod/Classes/NGORoundedButton.h; sourceTree = "<group>"; };
-		799823D41C1D68EF00A8DDEB /* NGORoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGORoundedButton.m; path = ../../../Pod/Classes/NGORoundedButton.m; sourceTree = "<group>"; };
 		8000C488C957C80A5A24A20B /* Pods-NGORoundedButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NGORoundedButton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NGORoundedButton/Pods-NGORoundedButton.debug.xcconfig"; sourceTree = "<group>"; };
 		B08F4E5349EB313268E07D65 /* libPods-NGORoundedButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NGORoundedButton.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B212A2703847B926B6F1C18E /* NGORoundedButton.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NGORoundedButton.podspec; path = ../NGORoundedButton.podspec; sourceTree = "<group>"; };
@@ -67,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF64F21D4376964C64EE267 /* libPods-NGORoundedButton.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDD94DE3869CF7A18EF2B33 /* libPods-NGORoundedButton.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +144,6 @@
 				7901D8641AB9D43700E141AB /* NGOAppDelegate.h */,
 				7901D8651AB9D43700E141AB /* NGOAppDelegate.m */,
 				7901D8671AB9D43700E141AB /* NGORoundedButton-Prefix.pch */,
-				7901D8EA1ABACA7200E141AB /* NGORoundedButton */,
 				7901D86A1AB9D43700E141AB /* NGOViewController.h */,
 				7901D86B1AB9D43700E141AB /* NGOViewController.m */,
 			);
@@ -170,15 +167,6 @@
 			path = NGORoundedButtonTests;
 			sourceTree = "<group>";
 		};
-		7901D8EA1ABACA7200E141AB /* NGORoundedButton */ = {
-			isa = PBXGroup;
-			children = (
-				799823D31C1D68EF00A8DDEB /* NGORoundedButton.h */,
-				799823D41C1D68EF00A8DDEB /* NGORoundedButton.m */,
-			);
-			path = NGORoundedButton;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7901D8D71AB9D5D700E141AB /* Build configuration list for PBXNativeTarget "NGORoundedButton" */;
 			buildPhases = (
+				C24D583CF9E3F09B79C09A64 /* Check Pods Manifest.lock */,
 				7901D8B31AB9D5D700E141AB /* Sources */,
 				7901D8B41AB9D5D700E141AB /* Frameworks */,
 				7901D8B51AB9D5D700E141AB /* Resources */,
+				F8ADE69487BC409957B89D6F /* Embed Pods Frameworks */,
+				94778F726B225F29888A0252 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7901D8DA1AB9D5D700E141AB /* Build configuration list for PBXNativeTarget "NGORoundedButtonTests" */;
 			buildPhases = (
+				276C5E08AC3CE63A0E7C829E /* Check Pods Manifest.lock */,
 				7901D8CB1AB9D5D700E141AB /* Sources */,
 				7901D8CC1AB9D5D700E141AB /* Frameworks */,
 				7901D8CD1AB9D5D700E141AB /* Resources */,
+				1E32142E1D6981A8B0CAAF51 /* Embed Pods Frameworks */,
+				1BF047A829ECA435067164E3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,7 +218,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NGO;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Stas Zhukovskiy";
 				TargetAttributes = {
 					7901D8B61AB9D5D700E141AB = {
@@ -262,7 +256,6 @@
 			files = (
 				7901D8E61ABAC9FE00E141AB /* Main_iPhone.storyboard in Resources */,
 				7901D8E51ABAC9FC00E141AB /* Main_iPad.storyboard in Resources */,
-				7901D8DE1ABAC8D500E141AB /* Info.plist in Resources */,
 				7901D8E31ABAC98700E141AB /* Images.xcassets in Resources */,
 				7901D8E71ABACA0300E141AB /* InfoPlist.strings in Resources */,
 			);
@@ -272,11 +265,103 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7901D8E01ABAC96500E141AB /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BF047A829ECA435067164E3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGORoundedButton/Pods-NGORoundedButton-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E32142E1D6981A8B0CAAF51 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGORoundedButton/Pods-NGORoundedButton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		276C5E08AC3CE63A0E7C829E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94778F726B225F29888A0252 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGORoundedButton/Pods-NGORoundedButton-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C24D583CF9E3F09B79C09A64 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8ADE69487BC409957B89D6F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGORoundedButton/Pods-NGORoundedButton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7901D8B31AB9D5D700E141AB /* Sources */ = {
@@ -285,7 +370,6 @@
 			files = (
 				7901D8E91ABACA1300E141AB /* NGOViewController.m in Sources */,
 				7901D8E21ABAC97100E141AB /* main.m in Sources */,
-				799823D51C1D68EF00A8DDEB /* NGORoundedButton.m in Sources */,
 				7901D8E41ABAC9B600E141AB /* NGOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +378,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				799823D61C1D6C1400A8DDEB /* NGORoundedButton.m in Sources */,
 				7901D8E11ABAC96E00E141AB /* NGORoundedButtonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +438,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -411,6 +495,7 @@
 		};
 		7901D8D81AB9D5D700E141AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8000C488C957C80A5A24A20B /* Pods-NGORoundedButton.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -423,6 +508,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "travel.andgo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -430,6 +516,7 @@
 		};
 		7901D8D91AB9D5D700E141AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32CC5146708F0F711EB46523 /* Pods-NGORoundedButton.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -439,6 +526,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "travel.andgo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -446,6 +534,7 @@
 		};
 		7901D8DB1AB9D5D700E141AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8000C488C957C80A5A24A20B /* Pods-NGORoundedButton.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -461,6 +550,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "travel.andgo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NGORoundedButton.app/NGORoundedButton";
 			};
@@ -468,6 +558,7 @@
 		};
 		7901D8DC1AB9D5D700E141AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32CC5146708F0F711EB46523 /* Pods-NGORoundedButton.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				COPY_PHASE_STRIP = NO;
@@ -480,6 +571,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "travel.andgo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NGORoundedButton.app/NGORoundedButton";
 			};

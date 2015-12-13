@@ -1,25 +1,23 @@
 {
   "name": "NGORoundedButton",
-  "version": "0.1.0",
-  "summary": "A short description of NGORoundedButton.",
-  "description": "                       An optional longer description of NGORoundedButton\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/NGORoundedButton",
+  "version": "2.2",
+  "summary": "A custom UIButton for common actions. Icons are drawn in CoreGraphics. No Images.",
+  "homepage": "https://github.com/andgotravel/NGORoundedButton",
   "license": "MIT",
   "authors": {
     "Stas Zhukovskiy": "stzhuk@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/NGORoundedButton.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/andgotravel/NGORoundedButton.git",
+    "tag": "2.2"
   },
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "NGORoundedButton": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "frameworks": [
+    "UIKit",
+    "CoreGraphics"
+  ]
 }

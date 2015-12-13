@@ -4,5 +4,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'NGORoundedButton', :exclusive => true do
   pod "NGORoundedButton", :path => "../"
 
-  
+link_with 'NGORoundedButton', 'NGORoundedButtonTests'
+
 end

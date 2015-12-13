@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "NGORoundedButton.h"
+#import <NGORoundedButton/NGORoundedButton.h>
 
 @interface NGORoundedButtonTests : XCTestCase
 
