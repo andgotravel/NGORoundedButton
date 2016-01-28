@@ -1,5 +1,5 @@
 PODS:
-  - NGORoundedButton (2.2)
+  - NGORoundedButton (2.4)
 
 DEPENDENCIES:
   - NGORoundedButton (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NGORoundedButton: 93dc7543c00e9019eace8d48d14c12d79be0d5b0
+  NGORoundedButton: 54ce867f05f5168512a85fdfe8bee3163a48b936
 
 COCOAPODS: 0.39.0

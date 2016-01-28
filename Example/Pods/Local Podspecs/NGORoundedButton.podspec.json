@@ -1,6 +1,6 @@
 {
   "name": "NGORoundedButton",
-  "version": "2.2",
+  "version": "2.4",
   "summary": "A custom UIButton for common actions. Icons are drawn in CoreGraphics. No Images.",
   "homepage": "https://github.com/andgotravel/NGORoundedButton",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/andgotravel/NGORoundedButton.git",
-    "tag": "2.2"
+    "tag": "2.4"
   },
   "platforms": {
     "ios": "7.0"
