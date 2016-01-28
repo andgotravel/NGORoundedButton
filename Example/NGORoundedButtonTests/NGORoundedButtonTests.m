@@ -43,6 +43,17 @@
     NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeSave andShape:NGORoundedButtonShapeSausage];
     XCTAssertEqual(button.type, NGORoundedButtonTypeSave);
     XCTAssertEqual(button.shape, NGORoundedButtonShapeSausage);
+    XCTAssertEqual(button.color, NGORoundedButtonColorDefault);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height * 2);
+}
+
+- (void)testThatButtonCanInitWithTypeShapeAndColor {
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeFilter shape:NGORoundedButtonShapeSausage andColor:NGORoundedButtonColorGreen];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeFilter);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeSausage);
+    XCTAssertEqual(button.color, NGORoundedButtonColorGreen);
     XCTAssertGreaterThan(button.frame.size.width, 0);
     XCTAssertGreaterThan(button.frame.size.height, 0);
     XCTAssertEqual(button.frame.size.width, button.frame.size.height * 2);
@@ -57,7 +68,8 @@
                        @(NGORoundedButtonTypeFilter),
                        @(NGORoundedButtonTypeOK),
                        @(NGORoundedButtonTypeSave),
-                       @(NGORoundedButtonTypeShare)];
+                       @(NGORoundedButtonTypeShare),
+                       @(NGORoundedButtonTypeCustomText)];
     
     [types enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NGORoundedButtonType type = [types[idx] integerValue];
@@ -66,6 +78,52 @@
         XCTAssertGreaterThan(button.accessibilityLabel.length, 0);
         XCTAssertGreaterThan(button.accessibilityTraits, UIAccessibilityTraitNone);
     }];
+}
+
+- (void)testThatButtonCanInitWithTypeOKAndShapeCircle {
+    
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeOK andShape:NGORoundedButtonShapeCircle];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeOK);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeCircle);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height);
+    XCTAssertGreaterThan(button.titleLabel.text.length, 0);
+}
+
+- (void)testThatButtonCanInitWithTypeOKAndShapeSausage {
+    
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeOK andShape:NGORoundedButtonShapeSausage];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeOK);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeSausage);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height * 2);
+    XCTAssertGreaterThan(button.titleLabel.text.length, 0);
+}
+
+- (void)testThatButtonCanInitWithCustomTextAndSausageShape {
+    
+    NSString *text = @"test text";
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonCustomText:text andShape:NGORoundedButtonShapeSausage];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeCustomText);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeSausage);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height * 2);
+    XCTAssertTrue([button.titleLabel.text isEqualToString:text]);
+}
+
+- (void)testThatButtonCanInitWithCustomTextAndCircle {
+    
+    NSString *text = @"test text";
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonCustomText:text andShape:NGORoundedButtonShapeCircle];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeCustomText);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeCircle);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height);
+    XCTAssertTrue([button.titleLabel.text isEqualToString:text]);
 }
 
 @end

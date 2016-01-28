@@ -61,6 +61,24 @@
     return self;
 }
 
+- (instancetype)initWithButtonType:(NGORoundedButtonType)type shape:(NGORoundedButtonShape)shape andColor:(NGORoundedButtonColor)color {
+    
+    self.type   = type;
+    self.shape  = shape;
+    self.color  = color;
+    self        = [self initWithDefaultSize];
+    return self;
+}
+
+- (instancetype)initWithButtonCustomText:(NSString *)string andShape:(NGORoundedButtonShape)shape {
+    
+    self.type   = NGORoundedButtonTypeCustomText;
+    self.shape  = shape;
+    self.customText = string;
+    self        = [self initWithDefaultSize];
+    return self;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setup];
@@ -82,6 +100,7 @@
     [self setupCornerRadius];
     [self setupShadow];
     [self setupTargets];
+    [self setupColor];
 
     switch (self.type) {
         case NGORoundedButtonTypeSave:      [self setupSaveButton];     break;
@@ -90,6 +109,7 @@
         case NGORoundedButtonTypeBack:      [self setupBackButton];     break;
         case NGORoundedButtonTypeFilter:    [self setupFilterButton];   break;
         case NGORoundedButtonTypeShare:     [self setupShareButton];    break;
+        case NGORoundedButtonTypeCustomText:    [self setupCustomTextButton];   break;
     }
 }
 
@@ -109,13 +129,28 @@
     }
 }
 
+- (void)setColor:(NGORoundedButtonColor)newColor {
+    
+    if (_color != newColor) {
+        _color = newColor;
+        [self setup];
+    }
+}
+
+- (void)setCustomText:(NSString *)newCustomText {
+    
+    if (_customText != newCustomText) {
+        _customText = newCustomText;
+        [self setup];
+    }
+}
+
 #pragma mark - Buttons
 
 - (void)setupSaveButton {
     
     self.accessibilityLabel     = @"Save";
     self.accessibilityTraits    = UIAccessibilityTraitButton;
-    self.backgroundColor = [UIColor colorWithRed:105/255.0 green:204/255.0 blue:57/255.0 alpha:1];;
     
     CAShapeLayer *checkmarkShape    = [CAShapeLayer layer];
     checkmarkShape.name             = SHAPE_TAG;
@@ -140,7 +175,6 @@
     
     self.accessibilityLabel     = @"Ok";
     self.accessibilityTraits    = UIAccessibilityTraitButton;
-    self.backgroundColor        = [UIColor colorWithRed:105/255.0 green:204/255.0 blue:57/255.0 alpha:1];
     NSDictionary *dict          = @{ NSForegroundColorAttributeName: [UIColor whiteColor],
                                      NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:18] };
     NSAttributedString *attr    = [[NSAttributedString alloc] initWithString:@"Ok" attributes:dict];
@@ -151,8 +185,7 @@
     
     self.accessibilityLabel     = @"Cancel";
     self.accessibilityTraits    = UIAccessibilityTraitButton;
-    self.backgroundColor                = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1.0];
-    self.layer.allowsEdgeAntialiasing   = YES;
+    self.layer.allowsEdgeAntialiasing = YES;
     
     CAShapeLayer *crossShape    = [CAShapeLayer layer];
     crossShape.name             = SHAPE_TAG;
@@ -180,8 +213,7 @@
     
     self.accessibilityLabel     = @"Back";
     self.accessibilityTraits    = UIAccessibilityTraitButton;
-    self.backgroundColor                = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1.0];
-    self.layer.allowsEdgeAntialiasing   = YES;
+    self.layer.allowsEdgeAntialiasing = YES;
     
     CAShapeLayer *leftArrowShape    = [CAShapeLayer layer];
     leftArrowShape.name             = SHAPE_TAG;
@@ -208,8 +240,7 @@
     
     self.accessibilityLabel     = @"Filter";
     self.accessibilityTraits    = UIAccessibilityTraitButton;
-    self.backgroundColor                = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1.0];
-    self.layer.allowsEdgeAntialiasing   = YES;
+    self.layer.allowsEdgeAntialiasing = YES;
     
     CAShapeLayer *funnelShape   = [CAShapeLayer layer];
     funnelShape.name            = SHAPE_TAG;
@@ -241,8 +272,7 @@
     
     self.accessibilityLabel     = @"Share";
     self.accessibilityTraits    = UIAccessibilityTraitButton;
-    self.backgroundColor                = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1.0];
-    self.layer.allowsEdgeAntialiasing   = YES;
+    self.layer.allowsEdgeAntialiasing = YES;
     
     CAShapeLayer *squareAndArrowShape   = [CAShapeLayer layer];
     squareAndArrowShape.name            = SHAPE_TAG;
@@ -275,6 +305,21 @@
     [self.layer addSublayer:squareAndArrowShape];
 }
 
+- (void)setupCustomTextButton {
+    
+    NSString *result = self.customText;
+    if (!result) {
+        self.customText = @"Text";
+    }
+    
+    self.accessibilityLabel     = self.customText;
+    self.accessibilityTraits    = UIAccessibilityTraitButton;
+    NSDictionary *dict          = @{ NSForegroundColorAttributeName: [UIColor whiteColor],
+                                     NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:18] };
+    NSAttributedString *attr    = [[NSAttributedString alloc] initWithString:self.customText attributes:dict];
+    [self setAttributedTitle:attr forState:UIControlStateNormal];
+}
+
 #pragma mark - Common UI setup
 
 - (void)setupCornerRadius {
@@ -297,6 +342,28 @@
     [self addTarget:self action:@selector(normalState)      forControlEvents:UIControlEventTouchUpInside];
     [self addTarget:self action:@selector(normalState)      forControlEvents:UIControlEventTouchDragOutside];
     [self addTarget:self action:@selector(highlitedState)   forControlEvents:UIControlEventTouchDown];
+}
+
+- (void)setupColor {
+    
+    UIColor *greenColor = [UIColor colorWithRed:105/255.0 green:204/255.0 blue:57/255.0 alpha:1];
+    UIColor *blueColor = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1.0];
+    
+    switch (self.color) {
+        case NGORoundedButtonColorBlue: self.backgroundColor = blueColor; break;
+        case NGORoundedButtonColorGreen: self.backgroundColor = greenColor; break;
+        case NGORoundedButtonColorDefault: {
+            switch (self.type) {
+                case NGORoundedButtonTypeSave:
+                case NGORoundedButtonTypeOK: self.backgroundColor = greenColor; break;
+                case NGORoundedButtonTypeBack:
+                case NGORoundedButtonTypeCancel:
+                case NGORoundedButtonTypeCustomText:
+                case NGORoundedButtonTypeFilter:
+                case NGORoundedButtonTypeShare: self.backgroundColor = blueColor; break;
+            }
+        }
+    }
 }
 
 #pragma mark - Button State Animation

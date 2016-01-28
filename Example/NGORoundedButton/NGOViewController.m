@@ -80,6 +80,12 @@
     
     NGORoundedButton *shareButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeShare andShape:NGORoundedButtonShapeSausage];
     [self.buttons addObject:shareButtonLong];
+    
+    NGORoundedButton *customTextButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeCustomText];
+    [self.buttons addObject:customTextButton];
+    
+    NGORoundedButton *customTextButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeCustomText andShape:NGORoundedButtonShapeSausage];
+    [self.buttons addObject:customTextButtonLong];
 }
 
 - (void)setupScrollView {
@@ -127,6 +133,7 @@
         case NGORoundedButtonTypeBack:      result = @"ButtonTypeBack";     break;
         case NGORoundedButtonTypeFilter:    result = @"ButtonTypeFilter";   break;
         case NGORoundedButtonTypeShare:     result = @"ButtonTypeShare";    break;
+        case NGORoundedButtonTypeCustomText:    result = @"ButtonTypeCustomText";   break;
     }
     return result;
 }
