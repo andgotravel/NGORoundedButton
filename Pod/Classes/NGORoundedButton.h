@@ -26,7 +26,8 @@ typedef NS_ENUM(NSInteger, NGORoundedButtonShape) {
 typedef NS_ENUM(NSInteger, NGORoundedButtonColor) {
     NGORoundedButtonColorDefault,
     NGORoundedButtonColorBlue,
-    NGORoundedButtonColorGreen
+    NGORoundedButtonColorGreen,
+    NGORoundedButtonColorPink
 };
 
 @interface NGORoundedButton : UIButton

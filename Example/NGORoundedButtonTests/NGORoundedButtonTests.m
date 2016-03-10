@@ -52,11 +52,21 @@
 - (void)testThatButtonCanInitWithTypeShapeAndColor {
     NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeFilter shape:NGORoundedButtonShapeSausage andColor:NGORoundedButtonColorGreen];
     XCTAssertEqual(button.type, NGORoundedButtonTypeFilter);
-    XCTAssertEqual(button.shape, NGORoundedButtonShapeSausage);
     XCTAssertEqual(button.color, NGORoundedButtonColorGreen);
+    button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeFilter shape:NGORoundedButtonShapeSausage andColor:NGORoundedButtonColorBlue];
+    XCTAssertEqual(button.color, NGORoundedButtonColorBlue);
+    button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeFilter shape:NGORoundedButtonShapeSausage andColor:NGORoundedButtonColorPink];
+    XCTAssertEqual(button.color, NGORoundedButtonColorPink);
+    
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeSausage);
     XCTAssertGreaterThan(button.frame.size.width, 0);
     XCTAssertGreaterThan(button.frame.size.height, 0);
     XCTAssertEqual(button.frame.size.width, button.frame.size.height * 2);
+    button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeFilter shape:NGORoundedButtonShapeCircle andColor:NGORoundedButtonColorPink];
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeCircle);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height);
 }
 
 - (void)testThatButtonHasAccessabilityLabel {

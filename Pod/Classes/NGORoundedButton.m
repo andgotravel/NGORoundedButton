@@ -9,6 +9,7 @@
 #import "NGORoundedButton.h"
 
 #define SHAPE_TAG @"CustomShapeTag"
+#define DEFAULT_SIZE 50.f
 
 @implementation NGORoundedButton
 
@@ -38,10 +39,9 @@
 
 - (instancetype)initWithDefaultSize {
     
-    CGFloat defaultSize = 50.f;
     switch (self.shape) {
-        case NGORoundedButtonShapeCircle: self = [self initWithFrame:CGRectMake(0, 0, defaultSize, defaultSize)];       break;
-        case NGORoundedButtonShapeSausage: self = [self initWithFrame:CGRectMake(0, 0, defaultSize * 2, defaultSize)];  break;
+        case NGORoundedButtonShapeCircle: self = [self initWithFrame:CGRectMake(0, 0, DEFAULT_SIZE, DEFAULT_SIZE)];       break;
+        case NGORoundedButtonShapeSausage: self = [self initWithFrame:CGRectMake(0, 0, DEFAULT_SIZE * 2, DEFAULT_SIZE)];  break;
     }
     return self;
 }
@@ -347,11 +347,13 @@
 - (void)setupColor {
     
     UIColor *greenColor = [UIColor colorWithRed:105/255.0 green:204/255.0 blue:57/255.0 alpha:1];
-    UIColor *blueColor = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1.0];
+    UIColor *blueColor = [UIColor colorWithRed:0/255.0 green:195/255.0 blue:255/255.0 alpha:1];
+    UIColor *pinkColor = [UIColor colorWithRed:243/255.0 green:122/255.0 blue:183/255.0 alpha:1];
     
     switch (self.color) {
         case NGORoundedButtonColorBlue: self.backgroundColor = blueColor; break;
         case NGORoundedButtonColorGreen: self.backgroundColor = greenColor; break;
+        case NGORoundedButtonColorPink: self.backgroundColor = pinkColor; break;
         case NGORoundedButtonColorDefault: {
             switch (self.type) {
                 case NGORoundedButtonTypeSave:
