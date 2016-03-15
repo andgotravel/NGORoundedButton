@@ -54,7 +54,7 @@
 }
 
 - (instancetype)initWithButtonType:(NGORoundedButtonType)type andShape:(NGORoundedButtonShape)shape {
-
+    
     self.type   = type;
     self.shape  = shape;
     self        = [self initWithDefaultSize];
@@ -79,6 +79,15 @@
     return self;
 }
 
+- (instancetype)initWithButtonCustomImage:(UIImage *)image andShape:(NGORoundedButtonShape)shape {
+    
+    self.type   = NGORoundedButtonTypeCustomImage;
+    self.shape  = shape;
+    self.customImage = image;
+    self        = [self initWithDefaultSize];
+    return self;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setup];
@@ -90,18 +99,18 @@
 }
 
 - (void)setup {
-
+    
     for (CALayer *layer in self.layer.sublayers) {
         if ([layer.name isEqualToString:SHAPE_TAG]) {
             [layer removeFromSuperlayer];
         }
     }
-
+    
     [self setupCornerRadius];
     [self setupShadow];
     [self setupTargets];
     [self setupColor];
-
+    
     switch (self.type) {
         case NGORoundedButtonTypeSave:      [self setupSaveButton];     break;
         case NGORoundedButtonTypeOK:        [self setupOKButton];       break;
@@ -110,6 +119,7 @@
         case NGORoundedButtonTypeFilter:    [self setupFilterButton];   break;
         case NGORoundedButtonTypeShare:     [self setupShareButton];    break;
         case NGORoundedButtonTypeCustomText:    [self setupCustomTextButton];   break;
+        case NGORoundedButtonTypeCustomImage:   [self setupCustomImageButton];  break;
     }
 }
 
@@ -141,6 +151,14 @@
     
     if (_customText != newCustomText) {
         _customText = newCustomText;
+        [self setup];
+    }
+}
+
+- (void)setCustomImage:(UIImage *)newCustomImage {
+    
+    if (_customImage != newCustomImage) {
+        _customImage = newCustomImage;
         [self setup];
     }
 }
@@ -320,6 +338,14 @@
     [self setAttributedTitle:attr forState:UIControlStateNormal];
 }
 
+- (void)setupCustomImageButton {
+    
+    self.accessibilityLabel     = @"Custom Image";
+    self.accessibilityTraits    = UIAccessibilityTraitButton;
+    [self setImage:self.customImage forState:UIControlStateNormal];
+    [self setImage:self.customImage forState:UIControlStateHighlighted];
+}
+
 #pragma mark - Common UI setup
 
 - (void)setupCornerRadius {
@@ -361,6 +387,7 @@
                 case NGORoundedButtonTypeBack:
                 case NGORoundedButtonTypeCancel:
                 case NGORoundedButtonTypeCustomText:
+                case NGORoundedButtonTypeCustomImage:
                 case NGORoundedButtonTypeFilter:
                 case NGORoundedButtonTypeShare: self.backgroundColor = blueColor; break;
             }

@@ -62,13 +62,13 @@
     
     NGORoundedButton *cancelButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeCancel andShape:NGORoundedButtonShapeSausage];
     [self.buttons addObject:cancelButtonLong];
-
+    
     NGORoundedButton *backButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeBack];
     [self.buttons addObject:backButton];
     
     NGORoundedButton *backButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeBack andShape:NGORoundedButtonShapeSausage];
     [self.buttons addObject:backButtonLong];
-
+    
     NGORoundedButton *filterButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeFilter];
     [self.buttons addObject:filterButton];
     
@@ -86,6 +86,12 @@
     
     NGORoundedButton *customTextButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeCustomText andShape:NGORoundedButtonShapeSausage];
     [self.buttons addObject:customTextButtonLong];
+    
+    NGORoundedButton *customImageButton = [[NGORoundedButton alloc] initWithButtonCustomImage:[UIImage imageNamed:@"github"] andShape:NGORoundedButtonShapeCircle];
+    [self.buttons addObject:customImageButton];
+    
+    NGORoundedButton *customImageButtonLong = [[NGORoundedButton alloc] initWithButtonCustomImage:[UIImage imageNamed:@"github"] andShape:NGORoundedButtonShapeSausage];
+    [self.buttons addObject:customImageButtonLong];
 }
 
 - (void)setupScrollView {
@@ -134,8 +140,13 @@
         case NGORoundedButtonTypeFilter:    result = @"ButtonTypeFilter";   break;
         case NGORoundedButtonTypeShare:     result = @"ButtonTypeShare";    break;
         case NGORoundedButtonTypeCustomText:    result = @"ButtonTypeCustomText";   break;
+        case NGORoundedButtonTypeCustomImage:   result = @"ButtonTypeCustomImage";  break;
     }
     return result;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return NO;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

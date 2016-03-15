@@ -72,7 +72,7 @@
 - (void)testThatButtonHasAccessabilityLabel {
     
     NGORoundedButton *button = [[NGORoundedButton alloc] initWithDefaultSize];
-
+    
     NSArray *types = @[@(NGORoundedButtonTypeBack),
                        @(NGORoundedButtonTypeCancel),
                        @(NGORoundedButtonTypeFilter),
@@ -134,6 +134,30 @@
     XCTAssertGreaterThan(button.frame.size.height, 0);
     XCTAssertEqual(button.frame.size.width, button.frame.size.height);
     XCTAssertTrue([button.titleLabel.text isEqualToString:text]);
+}
+
+- (void)testThatButtonCanInitWithCustomImageAndCircle {
+    
+    UIImage *img = [UIImage imageNamed:@"github"];
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonCustomImage:img andShape:NGORoundedButtonShapeCircle];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeCustomImage);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeCircle);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height);
+    XCTAssertEqual([button imageForState:UIControlStateNormal], img);
+}
+
+- (void)testThatButtonCanInitWithCustomImageAndSausage {
+    
+    UIImage *img = [UIImage imageNamed:@"github"];
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonCustomImage:img andShape:NGORoundedButtonShapeSausage];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeCustomImage);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeSausage);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height * 2);
+    XCTAssertEqual([button imageForState:UIControlStateNormal], img);
 }
 
 @end

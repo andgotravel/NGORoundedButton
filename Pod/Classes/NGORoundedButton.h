@@ -15,7 +15,8 @@ typedef NS_ENUM(NSInteger, NGORoundedButtonType) {
     NGORoundedButtonTypeBack,
     NGORoundedButtonTypeFilter,
     NGORoundedButtonTypeShare,
-    NGORoundedButtonTypeCustomText
+    NGORoundedButtonTypeCustomText,
+    NGORoundedButtonTypeCustomImage
 };
 
 typedef NS_ENUM(NSInteger, NGORoundedButtonShape) {
@@ -36,6 +37,7 @@ typedef NS_ENUM(NSInteger, NGORoundedButtonColor) {
 @property (nonatomic) NGORoundedButtonShape shape;
 @property (nonatomic) NGORoundedButtonColor color;
 @property (nonatomic) NSString *customText;
+@property (nonatomic) UIImage *customImage;
 
 - (instancetype)initWithSize:(CGFloat)size;
 - (instancetype)initWithDefaultSize;
@@ -43,5 +45,6 @@ typedef NS_ENUM(NSInteger, NGORoundedButtonColor) {
 - (instancetype)initWithButtonType:(NGORoundedButtonType)type andShape:(NGORoundedButtonShape)shape;
 - (instancetype)initWithButtonType:(NGORoundedButtonType)type shape:(NGORoundedButtonShape)shape andColor:(NGORoundedButtonColor)color;
 - (instancetype)initWithButtonCustomText:(NSString *)string andShape:(NGORoundedButtonShape)shape;
+- (instancetype)initWithButtonCustomImage:(UIImage *)image andShape:(NGORoundedButtonShape)shape;
 
 @end
