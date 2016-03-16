@@ -48,43 +48,43 @@
 
 - (instancetype)initWithButtonType:(NGORoundedButtonType)type {
     
-    self.type   = type;
-    self        = [self initWithDefaultSize];
+    _type   = type;
+    self    = [self initWithDefaultSize];
     return self;
 }
 
 - (instancetype)initWithButtonType:(NGORoundedButtonType)type andShape:(NGORoundedButtonShape)shape {
     
-    self.type   = type;
-    self.shape  = shape;
-    self        = [self initWithDefaultSize];
+    _type   = type;
+    _shape  = shape;
+    self    = [self initWithDefaultSize];
     return self;
 }
 
 - (instancetype)initWithButtonType:(NGORoundedButtonType)type shape:(NGORoundedButtonShape)shape andColor:(NGORoundedButtonColor)color {
     
-    self.type   = type;
-    self.shape  = shape;
-    self.color  = color;
-    self        = [self initWithDefaultSize];
+    _type   = type;
+    _shape  = shape;
+    _color  = color;
+    self    = [self initWithDefaultSize];
     return self;
 }
 
 - (instancetype)initWithButtonCustomText:(NSString *)string andShape:(NGORoundedButtonShape)shape {
     
-    self.type   = NGORoundedButtonTypeCustomText;
-    self.shape  = shape;
-    self.customText = string;
+    _type       = NGORoundedButtonTypeCustomText;
+    _shape      = shape;
+    _customText = string;
     self        = [self initWithDefaultSize];
     return self;
 }
 
 - (instancetype)initWithButtonCustomImage:(UIImage *)image andShape:(NGORoundedButtonShape)shape {
     
-    self.type   = NGORoundedButtonTypeCustomImage;
-    self.shape  = shape;
-    self.customImage = image;
-    self        = [self initWithDefaultSize];
+    _type           = NGORoundedButtonTypeCustomImage;
+    _shape          = shape;
+    _customImage    = image;
+    self            = [self initWithDefaultSize];
     return self;
 }
 
@@ -127,6 +127,18 @@
     
     if (_type != newType) {
         _type = newType;
+        
+        if (_type != NGORoundedButtonTypeCustomText) {
+            _customText = @"";
+            [self setAttributedTitle:[[NSAttributedString alloc] initWithString:@""] forState:UIControlStateNormal];
+            [self setAttributedTitle:[[NSAttributedString alloc] initWithString:@""] forState:UIControlStateHighlighted];
+        }
+        
+        if (_type != NGORoundedButtonTypeCustomImage) {
+            _customImage = nil;
+            [self setImage:nil forState:UIControlStateNormal];
+            [self setImage:nil forState:UIControlStateHighlighted];
+        }
         [self setup];
     }
 }
@@ -325,17 +337,20 @@
 
 - (void)setupCustomTextButton {
     
+    self.accessibilityLabel     = @"Custom Text";
+    self.accessibilityTraits    = UIAccessibilityTraitButton;
+    
     NSString *result = self.customText;
     if (!result) {
-        self.customText = @"Text";
+        NSLog(@"NGORoundedButton Warning! You forgot to set the customText property");
+        return;
     }
     
-    self.accessibilityLabel     = self.customText;
-    self.accessibilityTraits    = UIAccessibilityTraitButton;
     NSDictionary *dict          = @{ NSForegroundColorAttributeName: [UIColor whiteColor],
                                      NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:18] };
     NSAttributedString *attr    = [[NSAttributedString alloc] initWithString:self.customText attributes:dict];
     [self setAttributedTitle:attr forState:UIControlStateNormal];
+    [self setAttributedTitle:attr forState:UIControlStateHighlighted];
 }
 
 - (void)setupCustomImageButton {

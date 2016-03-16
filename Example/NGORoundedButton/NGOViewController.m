@@ -81,10 +81,10 @@
     NGORoundedButton *shareButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeShare andShape:NGORoundedButtonShapeSausage];
     [self.buttons addObject:shareButtonLong];
     
-    NGORoundedButton *customTextButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeCustomText];
+    NGORoundedButton *customTextButton = [[NGORoundedButton alloc] initWithButtonCustomText:@"Text" andShape:NGORoundedButtonShapeCircle];
     [self.buttons addObject:customTextButton];
     
-    NGORoundedButton *customTextButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeCustomText andShape:NGORoundedButtonShapeSausage];
+    NGORoundedButton *customTextButtonLong = [[NGORoundedButton alloc] initWithButtonCustomText:@"Text" andShape:NGORoundedButtonShapeSausage];
     [self.buttons addObject:customTextButtonLong];
     
     NGORoundedButton *customImageButton = [[NGORoundedButton alloc] initWithButtonCustomImage:[UIImage imageNamed:@"github"] andShape:NGORoundedButtonShapeCircle];

@@ -160,4 +160,28 @@
     XCTAssertEqual([button imageForState:UIControlStateNormal], img);
 }
 
+- (void)testThatButtonRemovesCustomImageAfterTypeChange {
+    
+    UIImage *img = [UIImage imageNamed:@"github"];
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonCustomImage:img andShape:NGORoundedButtonShapeCircle];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeCustomImage);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeCircle);
+    XCTAssertEqual([button imageForState:UIControlStateNormal], img);
+    
+    button.type = NGORoundedButtonTypeOK;
+    XCTAssertNil([button imageForState:UIControlStateNormal]);
+}
+
+- (void)testThatButtonRemovesCustomTextAfterTypeChange {
+    
+    NSString *text = @"test";
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonCustomText:text andShape:NGORoundedButtonShapeCircle];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeCustomText);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeCircle);
+    XCTAssertTrue([[[button attributedTitleForState:UIControlStateNormal] string] isEqualToString:text]);
+    
+    button.type = NGORoundedButtonTypeCancel;
+    XCTAssertFalse([[[button attributedTitleForState:UIControlStateNormal] string] isEqualToString:text]);
+}
+
 @end
