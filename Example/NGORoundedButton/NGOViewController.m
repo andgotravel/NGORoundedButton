@@ -92,6 +92,12 @@
     
     NGORoundedButton *customImageButtonLong = [[NGORoundedButton alloc] initWithButtonCustomImage:[UIImage imageNamed:@"github"] andShape:NGORoundedButtonShapeSausage];
     [self.buttons addObject:customImageButtonLong];
+    
+    NGORoundedButton *addButton = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeAdd];
+    [self.buttons addObject:addButton];
+    
+    NGORoundedButton *addButtonLong = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeAdd andShape:NGORoundedButtonShapeSausage];
+    [self.buttons addObject:addButtonLong];
 }
 
 - (void)setupScrollView {
@@ -135,6 +141,7 @@
     switch (type) {
         case NGORoundedButtonTypeSave:      result = @"ButtonTypeSave";     break;
         case NGORoundedButtonTypeOK:        result = @"ButtonTypeOK";       break;
+        case NGORoundedButtonTypeAdd:       result = @"BUttonTypeAdd";      break;
         case NGORoundedButtonTypeCancel:    result = @"ButtonTypeCancel";   break;
         case NGORoundedButtonTypeBack:      result = @"ButtonTypeBack";     break;
         case NGORoundedButtonTypeFilter:    result = @"ButtonTypeFilter";   break;

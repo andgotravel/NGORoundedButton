@@ -16,7 +16,8 @@ typedef NS_ENUM(NSInteger, NGORoundedButtonType) {
     NGORoundedButtonTypeFilter,
     NGORoundedButtonTypeShare,
     NGORoundedButtonTypeCustomText,
-    NGORoundedButtonTypeCustomImage
+    NGORoundedButtonTypeCustomImage,
+    NGORoundedButtonTypeAdd
 };
 
 typedef NS_ENUM(NSInteger, NGORoundedButtonShape) {

@@ -112,6 +112,26 @@
     XCTAssertGreaterThan(button.titleLabel.text.length, 0);
 }
 
+- (void)testThatButtonCanInitWithTypeAddAndShapeCircle {
+    
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeAdd andShape:NGORoundedButtonShapeCircle];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeAdd);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeCircle);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height);
+}
+
+- (void)testThatButtonCanInitWithTypeAddAndShapeSausage {
+    
+    NGORoundedButton *button = [[NGORoundedButton alloc] initWithButtonType:NGORoundedButtonTypeAdd andShape:NGORoundedButtonShapeSausage];
+    XCTAssertEqual(button.type, NGORoundedButtonTypeAdd);
+    XCTAssertEqual(button.shape, NGORoundedButtonShapeSausage);
+    XCTAssertGreaterThan(button.frame.size.width, 0);
+    XCTAssertGreaterThan(button.frame.size.height, 0);
+    XCTAssertEqual(button.frame.size.width, button.frame.size.height * 2);
+}
+
 - (void)testThatButtonCanInitWithCustomTextAndSausageShape {
     
     NSString *text = @"test text";

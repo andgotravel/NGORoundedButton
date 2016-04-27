@@ -118,6 +118,7 @@
         case NGORoundedButtonTypeBack:      [self setupBackButton];     break;
         case NGORoundedButtonTypeFilter:    [self setupFilterButton];   break;
         case NGORoundedButtonTypeShare:     [self setupShareButton];    break;
+        case NGORoundedButtonTypeAdd:       [self setupAddButton];      break;
         case NGORoundedButtonTypeCustomText:    [self setupCustomTextButton];   break;
         case NGORoundedButtonTypeCustomImage:   [self setupCustomImageButton];  break;
     }
@@ -361,6 +362,34 @@
     [self setImage:self.customImage forState:UIControlStateHighlighted];
 }
 
+- (void)setupAddButton {
+    
+    self.accessibilityLabel     = @"Add";
+    self.accessibilityTraits    = UIAccessibilityTraitButton;
+    self.layer.allowsEdgeAntialiasing = YES;
+    
+    CAShapeLayer *plusShape = [CAShapeLayer layer];
+    plusShape.name          = SHAPE_TAG;
+    plusShape.lineWidth     = 2;
+    plusShape.masksToBounds = NO;
+    plusShape.lineCap       = kCALineCapRound;
+    plusShape.strokeColor   = [UIColor whiteColor].CGColor;
+    
+    CGRect fr       = self.bounds;
+    CGFloat ofSize  = 7;
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathMoveToPoint(path, NULL, CGRectGetMidX(fr), CGRectGetMidY(fr) - ofSize);
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr), CGRectGetMidY(fr) + ofSize);
+    CGPathMoveToPoint(path, NULL, CGRectGetMidX(fr) - ofSize, CGRectGetMidY(fr));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(fr) + ofSize, CGRectGetMidY(fr));
+    
+    plusShape.path = path;
+    CGPathRelease(path);
+    
+    [self.layer addSublayer:plusShape];
+}
+
 #pragma mark - Common UI setup
 
 - (void)setupCornerRadius {
@@ -398,6 +427,7 @@
         case NGORoundedButtonColorDefault: {
             switch (self.type) {
                 case NGORoundedButtonTypeSave:
+                case NGORoundedButtonTypeAdd:
                 case NGORoundedButtonTypeOK: self.backgroundColor = greenColor; break;
                 case NGORoundedButtonTypeBack:
                 case NGORoundedButtonTypeCancel:
